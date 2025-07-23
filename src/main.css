@@ -1,0 +1,17 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: auto; /* allow scroll */
+  
+  /* Firefox */
+  scrollbar-width: none;
+
+  /* IE and Edge (legacy) */
+  -ms-overflow-style: none;
+}
+
+/* Chrome, Safari, Edge (Chromium) */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}

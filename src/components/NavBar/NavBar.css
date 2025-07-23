@@ -1,0 +1,25 @@
+.NavBar {
+  position: fixed;
+  top: 40px;
+  right: 100px; /* or left: 400px if you prefer */
+
+  width: 95px;
+  height: 90px;
+  background-color: black;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  box-shadow: rgba(0, 0, 0, 0.226) 5px 5px 2px;
+  z-index: 1000; /* ensures it floats above other elements */
+}
+
+.NavBar span {
+  width: 30%;
+  height: 1px;
+  background-color: white;
+    
+}
