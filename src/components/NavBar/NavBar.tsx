@@ -1,6 +1,6 @@
 import "./NavBar.css"
 
-export let NavBar: React.FC = function(){
+export let NavBar = function(){
     return (
         <div className="NavBar">
             <span></span>

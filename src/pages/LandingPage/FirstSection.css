@@ -3,65 +3,64 @@
     src: url(/assets/PostNoBillsJaffna-ExtraBold.ttf);
 }
 
+@media screen and (min-width: 1500px) {
+    .FirstSection {
+        width: 100vw;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: #DA957C;
+        align-items: center;
+        justify-content: center;
+    }
 
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
+    .containerForNamesAndImages {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
 
+    .firstName {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 180px;
+        font-family: elliot, monospace; /* fallback to monospace during animation */
+        width: 6ch; /* fixed width to prevent shifting (Elliot is 6 letters) */
+        text-align: center;
+        white-space: nowrap;
+    }
 
-.FirstSection{
-    
-    width: 100vw;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: #DA957C;
-    align-items: center;
-    justify-content: center;
+    .lastName {
+         display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 180px;
+        font-family: elliot, monospace; /* fallback to monospace during animation */
+        width: 6ch; /* fixed width to prevent shifting (Elliot is 6 letters) */
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .backgroundImage {
+        align-self: center;
+        justify-self: center;
+        background-image: url("/assets/test.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 400px;
+        position: relative;
+        right: 50px;
+        box-shadow: rgba(0, 0, 0, 0.692) 20px 20px 1px;
+    }
 }
-
-.container{
-    display: flex;
-    flex-direction: column;
-    
-}
-
-.containerForNamesAndImages{
-    display: flex;
-   justify-content: center;
-   align-items: center;
-    gap: 50px;
-   
-}
-
-.firstName{
-    display: flex;
-    align-items: center;
-
-    font-size: 300px;
-    font-family: elliot;
-    margin-left: 300px;
-    
-}
-
-.lastName{
-
-    display: flex;
-    font-size: 300px;
-    justify-content: center;
-    align-items: center;
-    font-family: elliot;
-    margin-right: 130px;
-   
-}
-
-.backgroundImage{
-    align-self: center;
-    justify-self: center;
-    background-image: url("/assets/test.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 400px;
-    height: 500px;
-    box-shadow: rgba(0, 0, 0, 0.692) 20px 20px 1px;
-}
-
