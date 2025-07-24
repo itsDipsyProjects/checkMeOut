@@ -1,12 +1,9 @@
 @font-face {
     font-family: elliot;
-    src: url(/assets/RubikBrokenFax-Regular.ttf);
-}
-
-@font-face {
-    font-family: elliot2;
     src: url(/assets/PostNoBillsJaffna-ExtraBold.ttf);
 }
+
+
 
 
 
@@ -17,32 +14,41 @@
     display: flex;
     flex-direction: column;
     background-color: #DA957C;
+    align-items: center;
+    justify-content: center;
 }
 
 .container{
     display: flex;
     flex-direction: column;
+    
+}
+
+.containerForNamesAndImages{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+    gap: 50px;
    
 }
 
 .firstName{
-    width: 100vw;
     display: flex;
-}
-
-.firstName .h{
+    align-items: center;
 
     font-size: 300px;
     font-family: elliot;
-    margin-left: 90px;
-    width:20%;
+    margin-left: 300px;
+    
 }
 
 .lastName{
-    align-self: flex-end;
+
     display: flex;
     font-size: 300px;
-    font-family: elliot2;
+    justify-content: center;
+    align-items: center;
+    font-family: elliot;
     margin-right: 130px;
    
 }
@@ -56,6 +62,6 @@
     background-repeat: no-repeat;
     width: 400px;
     height: 500px;
-    box-shadow: rgba(0, 0, 0, 0.692) 50px 40px 1px;
+    box-shadow: rgba(0, 0, 0, 0.692) 20px 20px 1px;
 }
 

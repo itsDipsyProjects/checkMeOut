@@ -6,12 +6,12 @@ export let FirstSection:React.FC = function(){
         <div className="FirstSection">
            
             <div className="container">
-                <div className="firstName">
-                    <div className="h">Elliot</div>
-                    <NavBar></NavBar>
+                <NavBar></NavBar>
+                <div className="containerForNamesAndImages">
+                    <div className="firstName">Elliot</div>
+                    <div className="backgroundImage"></div> 
+                    <div className="lastName">Collins</div>
                 </div>
-                <div className="backgroundImage"></div>
-                <div className="lastName">Collins</div>
             </div>
         </div>
     )
