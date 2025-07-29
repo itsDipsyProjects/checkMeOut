@@ -6,20 +6,22 @@ import "./FirstSection.css";
 
 export function FirstName() {
     const myRef = useRef(null);
-    const scrambleChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
    useEffect(() => {
     let animationFrameId;
-    const scrambleChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    const scrambleChars = "ABCDEFGHIJK";
     const targetWord = "Elliot";
     let lastUpdate = 0;
     const frameInterval = 50;
     let result = Array(targetWord.length).fill(""); // ["", "", "", "", "", ""]
+    let done = false;
+    
 
     const scramble = (timestamp) => {
+        animationFrameId = requestAnimationFrame(scramble);
         if (timestamp - lastUpdate >= frameInterval) {
             lastUpdate = timestamp;
-
+            
             for (let i = 0; i < targetWord.length; i++) {
                 const delay = i * 200;
                 const lockTime = delay + 400;
@@ -28,18 +30,24 @@ export function FirstName() {
                     result[i] = scrambleChars[Math.floor(Math.random() * scrambleChars.length)];
                 } else if (timestamp >= lockTime) {
                     result[i] = targetWord[i];
+                    if(myRef.current.textContent === targetWord){
+                        console.log("its done")
+                        return cancelAnimationFrame(animationFrameId);
+                    }
                 }
             }
-
+            
             myRef.current.textContent = result.join("");
         }
 
-        animationFrameId = requestAnimationFrame(scramble);
     };
 
     scramble();
+    if(done){
+        console.log(animationFrameId);
+        
+    }
 
-    return () => cancelAnimationFrame(animationFrameId);
 }, []);
 
 
@@ -52,13 +60,14 @@ export function LastName() {
     // TODO: Fatta denna kod för animationen var tydligen mer komplex än trott, testa och försök skriva den själv sen för nu är den lite gptad
      useEffect(() => {
         let animationFrameId;
-        const scrambleChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        const scrambleChars = "ABCDEFGHIJKL";
         const targetWord = "Collins";
         let lastUpdate = 0;
         const frameInterval = 50;
         let result = Array(targetWord.length).fill(""); // ["", "", "", "", "", ""]
-
+        let done = false;
         const scramble = (timestamp) => {
+            animationFrameId = requestAnimationFrame(scramble);
             if (timestamp - lastUpdate >= frameInterval) {
                 lastUpdate = timestamp;
 
@@ -70,18 +79,22 @@ export function LastName() {
                         result[i] = scrambleChars[Math.floor(Math.random() * scrambleChars.length)];
                     } else if (timestamp >= lockTime) {
                         result[i] = targetWord[i];
+                        if(myRef.current.textContent === targetWord){
+                            console.log("its done")
+                            return cancelAnimationFrame(animationFrameId);
+                        }
                     }
                 }
                 myRef.current.textContent = result.join("");
-
+                
             }
-
-            animationFrameId = requestAnimationFrame(scramble);
+            
+            
+            
         };
 
         scramble();
 
-        return () => cancelAnimationFrame(animationFrameId);
     }, []);
 
     return <div ref={myRef} className="lastName">Collins</div>;
