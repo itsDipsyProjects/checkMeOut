@@ -11,15 +11,27 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 7px;
 
-  box-shadow: rgba(0, 0, 0, 0.226) 5px 5px 2px;
   z-index: 1000; /* ensures it floats above other elements */
 }
 
 .NavBar span {
   width: 30%;
-  height: 1.5px;
+  height: 1px;
   background-color: white;
-    
+}
+
+.NavBarClicked{
+  position: fixed;
+  top: 0px;
+  right: 0px; /* or left: 400px if you prefer */
+  width: 20vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
 }

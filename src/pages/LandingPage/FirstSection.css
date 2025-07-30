@@ -4,9 +4,12 @@
 }
 
 @media screen and (min-width: 1500px) {
+
+ 
     .FirstSection {
+        scroll-behavior: smooth;
         width: 100vw;
-        min-height: 100vh;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         background-color: #DA957C;
@@ -17,6 +20,8 @@
     .container {
         display: flex;
         flex-direction: column;
+        height: 100%;
+        width: 100%;
         justify-content: center;
         align-items: center;
     }
